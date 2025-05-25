@@ -56,7 +56,7 @@ export function Navbar() {
       <div className="fixed top-0 left-0 w-full p-8 flex justify-between items-center z-1 text-background text-2xl">
         <div className="toggle">
           <Link href={"/"} className="cursor-pointer">
-            Home
+            NeuralAi
           </Link>
         </div>
         <div onClick={() => setIsMenuOpen(!isMenuOpen)}>
