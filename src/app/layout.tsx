@@ -13,7 +13,9 @@ const inter = Inter({
 
 const silkScreen = Silkscreen({
   subsets : ["latin"],
-  weight : ["400", "700"]
+  weight : ["400", "700"],
+  variable: '--font-silkscreen',
+  display : 'swap'
 })
 
 export const metadata: Metadata = {
@@ -28,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${inter.className} ${silkScreen.variable} antialiased`}>
         <Navbar />
         {children}
       </body>
