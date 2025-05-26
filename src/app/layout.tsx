@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Silkscreen } from "next/font/google";
+import { Inter, Pixelify_Sans, Silkscreen } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 
@@ -18,6 +18,13 @@ const silkScreen = Silkscreen({
   display : 'swap'
 })
 
+const pixelSans = Pixelify_Sans({
+  subsets : ["latin"],
+  weight : ["400", "500", "600", "700"],
+  variable : '--font-pixel-sans',
+  display : "swap"
+})
+
 export const metadata: Metadata = {
   title: "NeuroAi",
   description: "Ai Just Like Human Intelligence",
@@ -30,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${silkScreen.variable} antialiased`}>
+      <body className={`${inter.className} ${silkScreen.variable} ${pixelSans.variable} antialiased`}>
         <Navbar />
         {children}
       </body>
