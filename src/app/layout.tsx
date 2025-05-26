@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Silkscreen } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 
@@ -10,6 +10,11 @@ const inter = Inter({
   weight : ["400", "500", "600","700","800","900"]
 })
 
+
+const silkScreen = Silkscreen({
+  subsets : ["latin"],
+  weight : ["400", "700"]
+})
 
 export const metadata: Metadata = {
   title: "NeuroAi",
@@ -23,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
+      <body className={`${inter.className} antialiased`}>
         <Navbar />
         {children}
       </body>
